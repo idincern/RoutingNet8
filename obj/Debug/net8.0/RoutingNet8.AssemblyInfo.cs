@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("RoutingNet8")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+a5baa92b142874218c2f021cb2ded68563d6945c")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+27cdd98c44310fa5b889011efe148e701fa8683e")]
 [assembly: System.Reflection.AssemblyProductAttribute("RoutingNet8")]
 [assembly: System.Reflection.AssemblyTitleAttribute("RoutingNet8")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
