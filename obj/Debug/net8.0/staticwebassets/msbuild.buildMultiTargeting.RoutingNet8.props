@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\RoutingNet8.props" />
+</Project>
