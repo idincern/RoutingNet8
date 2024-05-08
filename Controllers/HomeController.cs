@@ -4,6 +4,8 @@ using RoutingNet8.Models;
 
 namespace RoutingNet8.Controllers;
 
+//[Route("[controller]/[action]")]
+[Route("home")]
 public class HomeController : Controller
 {
     private readonly ILogger<HomeController> _logger;
@@ -17,7 +19,7 @@ public class HomeController : Controller
     // {
     //     return View();
     // }
-
+    [Route("index/{id:int?}/{x?}/{y?}")]
     public IActionResult Index(string id, string x, string y)
     {
         System.Console.WriteLine("id: "+ id + ", x: " + x + ", y: " + y);
