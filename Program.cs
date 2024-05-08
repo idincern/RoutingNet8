@@ -31,12 +31,8 @@ var applicationBuilder = app.UseEndpoints(endpoints =>
     //Type 1(Default):
     endpoints.MapDefaultControllerRoute(); // {controller=Home}/{action=Index}/{id?} = Default Route
     // {}: Parameters. controller and action are pre-defined by the arhitecture. Other than these are custom parameters. Id is custom this case.
-    // If route is /, /home
-    //              /home/index
-    // is triggered, Home/Index will be returned by default.
-
-    // if the route is /personel/getir, then it will be triggered.
-    // if the route is only /personel, then /personel/index will be triggered.
+    // If route is /, /home, /home/index Home/Index will be returned by default.
+    // If the route is /personel/getir, then it will also be triggered, but if the route is only /personel, then /personel/index will be triggered.
 
     //Type 2(MapControllerRoute):
     endpoints.MapControllerRoute("CustomRoute", "{controller=Person}/{action=Index}"); // We should add the default values because if the route is empty then, error will be occurred.
@@ -44,7 +40,7 @@ var applicationBuilder = app.UseEndpoints(endpoints =>
     // Enables us to create custom routes rather than default. It needs name and pattern
 
     //Type 3(MapControllerRoute overload):
-    endpoints.MapControllerRoute("Mainpage", "Mainpage", new {controller="Home", action="Index"});// when /mainpage is triggered, Home/Index will be returned by default
+    endpoints.MapControllerRoute("MoreSpecializedCustomRoute", "Mainpage", new{controller="Home", action="Index"});// when /mainpage is triggered, Home/Index will be returned by default
 });
 
 app.Run();
