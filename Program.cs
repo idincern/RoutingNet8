@@ -42,6 +42,9 @@ var applicationBuilder = app.UseEndpoints(endpoints =>
     endpoints.MapControllerRoute("CustomRoute", "{controller=Person}/{action=Index}"); // We should add the default values because if the route is empty then, error will be occurred.
     // endpoints.MapControllerRoute("CustomRoute", "{action}/idincern/{controller}"); // custom route with static string
     // Enables us to create custom routes rather than default. It needs name and pattern
+
+    //Type 3(MapControllerRoute overload):
+    endpoints.MapControllerRoute("Mainpage", "Mainpage", new {controller="Home", action="Index"});// when /mainpage is triggered, Home/Index will be returned by default
 });
 
 app.Run();
