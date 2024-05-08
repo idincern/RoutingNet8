@@ -13,8 +13,14 @@ public class HomeController : Controller
         _logger = logger;
     }
 
-    public IActionResult Index()
+    // public IActionResult Index()
+    // {
+    //     return View();
+    // }
+
+    public IActionResult Index(string id, string x, string y)
     {
+        System.Console.WriteLine("id: "+ id + ", x: " + x + ", y: " + y);
         return View();
     }
 

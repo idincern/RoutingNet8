@@ -41,6 +41,11 @@ var applicationBuilder = app.UseEndpoints(endpoints =>
 
     //Type 3(MapControllerRoute overload):
     endpoints.MapControllerRoute("MoreSpecializedCustomRoute", "Mainpage", new{controller="Home", action="Index"});// when /mainpage is triggered, Home/Index will be returned by default
+
+    //Type 4(CustomParameters):
+    endpoints.MapControllerRoute("CustomParameters", "{controller=Home}/{action=Index}/{id:int?}/{x:alpha:length(11)?}/{y?}"); // id is integer only, x and y can be null but string is preffered. x's length is 11 chars and its alphabetic(a-Z).
+    //types can be int, alpha(A-z), bool, datetime, decimal, double, float, guid
+    //length(11), maxlength(11), minlength(11), range(min,max), min(minvalue), max(maxvalue) are other constraints of the route parameters.
 });
 
 app.Run();
