@@ -28,12 +28,11 @@ app.UseAuthorization();
 #pragma warning disable ASP0014 // Suggest using top level route registrations
 var applicationBuilder = app.UseEndpoints(endpoints =>
 {
-
     // // Type 1(Default):
     // endpoints.MapDefaultControllerRoute(); // {controller=Home}/{action=Index}/{id?} = Default Route
-    // // {}: Parameters. controller and action are pre-defined by the arhitecture. Other than these are custom parameters. Id is custom this case.
-    // // If route is /, /home, /home/index Home/Index will be returned by default.
-    // // If the route is /personel/getir, then it will also be triggered, but if the route is only /personel, then /personel/index will be triggered.
+    // // {}: Parameters. controller and action are pre-defined by the arhitecture. Other than these are custom parameters. Id is custom in this case.
+    // // If route is /, /home, /home/index => Home/Index will be returned by default.
+    // // If the route is /person/get, then it will also be triggered, but if the route is only /person, then /person/index will be triggered.
 
     // // Type 2(MapControllerRoute):
     // endpoints.MapControllerRoute("CustomRoute", "{controller=Person}/{action=Index}"); // We should add the default values because if the route is empty then, error will be occurred.
